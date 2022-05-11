@@ -13,7 +13,7 @@ $mysqli=new mysqli("localhost","root","","assignment");
     if ($result->num_rows == 0) {
     $url = 'https://api.openweathermap.org/data/2.5/weather?q=' . $_GET['city'] . '&unit=metric&appid=cf23d29764db17a41f7f2cc6445fc381';
     
-    // Get data from openweathermap and store in JSON object
+    
     $data = file_get_contents($url);
     $json = json_decode($data, true);
 
